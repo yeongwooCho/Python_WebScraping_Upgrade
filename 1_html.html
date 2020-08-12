@@ -1,0 +1,30 @@
+<!-- 웹 스크래핑: 웹페이지에서 내가 원하는 부분만 가져오는 것
+컷닝페이퍼를 만들때 내가 원하는 내용만 가공해서 들고가는것은 웹 스크래핑
+
+웹 크롤링:  어떤 웹페이지가 주어지면 그 페이지내에 있는 링크들을 따라가며 모든내용을 가져오는 것
+서점에서 카트를 주고 30초동안 젤 위에있는 책을들 제외한 모든책을 공짜로 준다면
+눈에 보이는 모든책을 쓸어담으면 웹크롤링
+웹페이지내에서 허용된 링크(웹페이지마다 허용범위를 알려줌)를 따라가며 마구잡이로 가져오는 것
+
+우리가 다룰 내용은 웹 스크래핑이다. HTML을 중점으로 알면 되긴하다.
+주의 : 꼭 이해해야 한다. 사이트마다 변동사항이 존재할 수 있기때문에
+
+
+HTML(Hyper Text Markup Language)
+visualcode-openinbrowser를 확장에서 설치한다 : html문서를 브라우져에서 바로 볼수 있다.
+로그인 페이지를 만들어보자
+input tag를 사용하며 type, value는 attribute(속성)이라하며 element의 세부 속성을 의미한다. -->
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>나도코딩 홈페이지</title>
+  </head>
+  <body>
+    <h1>안녕하세요</h1>
+    <input type="text" value="아이디를 입력하세요" />
+    <input type="password" />
+    <input type="button" value="로그인" />
+    <a href="http://google.com">구글로 이동하기</a>
+  </body>
+</html>
