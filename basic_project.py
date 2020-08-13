@@ -39,4 +39,3 @@ artis = soup.find_all('div', attrs={'class': 'hdline_article_tit'})
 for ind, arti in enumerate(artis):
     print(f"{ind}. {arti.get_text().strip()}")
     print(f"(링크 : {arti.a['href']})")
-
