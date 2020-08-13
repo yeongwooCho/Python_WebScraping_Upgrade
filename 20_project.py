@@ -25,6 +25,7 @@ print(state)
 print(f"{cur}℃\t( 최저 {max_min[0].get_text()}℃ / 최고 {max_min[2].get_text()}℃ )")
 print(f'오전 강수확률 {rains[0].get_text()}% / 오후 강수확률 {rains[1].get_text()}%')
 
+print('\n\n')
 # =================================================================================================================
 # =================================================================================================================
 
@@ -39,14 +40,3 @@ for ind, arti in enumerate(artis):
     print(f"{ind}. {arti.get_text().strip()}")
     print(f"(링크 : {arti.a['href']})")
 
-# =================================================================================================================
-# =================================================================================================================
-
-# [IT 뉴스]
-url = 'https://news.naver.com/main/list.nhn?mode=LS2D&mid=shm&sid1=105&sid2=230'
-res = requests.get(url)
-res.raise_for_status()
-
-soup = BeautifulSoup(res.text, 'lxml')
-soup.find_all('span')
-date is_new, date is_outdated
