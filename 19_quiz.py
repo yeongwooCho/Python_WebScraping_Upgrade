@@ -5,7 +5,7 @@ import time
 
 url = "https://daum.net"
 options = webdriver.ChromeOptions()
-options.headless=True
+options.headless = True
 options.add_argument('window-size=1920x1080')
 
 browser = webdriver.Chrome(options=options)
@@ -13,7 +13,8 @@ browser.maximize_window()
 browser.get(url)
 
 browser.find_element_by_xpath('//*[@id="q"]').send_keys('송파 헬리오시티')
-browser.find_element_by_xpath('//*[@id="daumSearch"]/fieldset/div/div/button[2]').click()
+browser.find_element_by_xpath(
+    '//*[@id="daumSearch"]/fieldset/div/div/button[2]').click()
 
 soup = BeautifulSoup(browser.page_source, 'lxml')
 pages = soup.find('table', attrs={'class': 'tbl'}).find_all('tr')
@@ -33,5 +34,5 @@ for page in pages[1:]:
     print('가격 : ', datas[2].get_text().strip())
     print('동 : ', datas[3].get_text().strip())
     print('층 : ', datas[4].get_text().strip())
-    
+
 browser.quit()
